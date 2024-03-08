@@ -10,11 +10,7 @@ class RoleService{
         })
         if(role){
             throw new Error('Role já cadastrada')
-<<<<<<< HEAD
-        }
-=======
         } 
->>>>>>> master
         try {
             
             const newRole = await database.roles.create({
