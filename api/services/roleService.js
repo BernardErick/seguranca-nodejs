@@ -12,16 +12,16 @@ class RoleService{
             throw new Error('Role já cadastrada')
         }
         try {
-            console.log(uuid.v4)
+            
             const newRole = await database.roles.create({
-                id: uuid.v4,
+                id: uuid.v4(),
                 nome: dto.nome,
                 descricao: dto.descricao
             })
 
             return newRole
         } catch (error) {
-            throw new Error('Erro ao cadastrar role'+ error.message) 
+            throw new Error('Erro ao cadastrar role: '+ error.message) 
         }
     }
 }
