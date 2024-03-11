@@ -23,7 +23,7 @@ class ProdutoService {
 
             return newProduto;
         } catch (error) {
-            console.error('Message error: ', error.message);
+            console.error('Erro ao cadastrar o produto: ', error.message);
             throw error;
         }
     }
